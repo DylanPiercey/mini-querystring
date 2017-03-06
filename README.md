@@ -37,11 +37,17 @@ npm install mini-querystring
 ```javascript
 import { parse, stringify } from 'mini-querystring'
 
-// Standard query string.
+// Parse standard query string.
 parse('a=1&b=2&') /* { a: '1', b: '2' } */
 
-// Nested query string.
-parse('a=1&b[c]=2') /* { a: '1', b: { c: '1' } } */
+// Parse nested query string.
+parse('a=1&b[c]=2', true) /* { a: '1', b: { c: '1' } } */
+
+// Stringify standard object.
+stringify({ a: 1 }) /* 'a=1' */
+
+// Stringify nested object.
+stringify({ a: { b: 1 } }) /* 'a[b]=1'
 ```
 
 ### Contributions
