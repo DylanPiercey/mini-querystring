@@ -1,0 +1,47 @@
+{
+  "name": "mini-querystring",
+  "description": "Lightweight isomorphic querystring parser.",
+  "version": "1.0.0",
+  "author": "Dylan Piercey <pierceydylan@gmail.com>",
+  "browser": "browser.js",
+  "bugs": "https://github.com/DylanPiercey/mini-querystring/issues",
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "snazzy": "^3.0.0",
+    "standard": "^6.0.8"
+  },
+  "homepage": "https://github.com/DylanPiercey/mini-querystring",
+  "keywords": [
+    "URL",
+    "querystring",
+    "qs",
+    "parse",
+    "isomorphic",
+    "mini",
+    "universal"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DylanPiercey/mini-querystring"
+  },
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "test": "npm run lint && mocha ./test/**/*.test.js"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "before",
+      "beforeEach",
+      "after",
+      "afterEach"
+    ]
+  },
+  "dependencies": {
+    "q-flat": "^0.2.3",
+    "q-set": "^1.4.4"
+  }
+}
