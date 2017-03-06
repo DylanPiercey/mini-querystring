@@ -47,7 +47,7 @@ parse('a=1&b[c]=2', true) /* { a: '1', b: { c: '1' } } */
 stringify({ a: 1 }) /* 'a=1' */
 
 // Stringify nested object.
-stringify({ a: { b: 1 } }) /* 'a[b]=1'
+stringify({ a: { b: 1 } }, true) /* 'a[b]=1'
 ```
 
 ### Contributions

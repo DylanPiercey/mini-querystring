@@ -1,7 +1,7 @@
 {
   "name": "mini-querystring",
   "description": "Lightweight isomorphic querystring parser.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
   "browser": "browser.js",
   "bugs": "https://github.com/DylanPiercey/mini-querystring/issues",
