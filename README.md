@@ -8,9 +8,9 @@
   <a href="https://nodejs.org/api/documentation.html#documentation_stability_index">
     <img src="https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square" alt="API stability"/>
   </a>
-  <!-- Standard -->
-  <a href="https://github.com/feross/standard">
-    <img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square" alt="Standard"/>
+  <!-- TypeScript -->
+  <a href="http://typescriptlang.org">
+    <img src="https://img.shields.io/badge/%3C%2F%3E-typescript-blue.svg" alt="TypeScript"/>
   </a>
   <!-- NPM version -->
   <a href="https://npmjs.org/package/mini-querystring">
@@ -19,6 +19,10 @@
   <!-- Downloads -->
   <a href="https://npmjs.org/package/mini-querystring">
     <img src="https://img.shields.io/npm/dm/mini-querystring.svg?style=flat-square" alt="Downloads"/>
+  </a>
+  <!-- Size -->
+  <a href="https://npmjs.org/package/mini-url">
+    <img src="https://img.shields.io/badge/size-977b-green.svg" alt="Browser Bundle Size"/>
   </a>
 </h1>
 
@@ -52,6 +56,6 @@ stringify({ a: { b: 1 } }, true) /* 'a[b]=1'
 
 ### Contributions
 
-* Use `npm test` to run tests.
+* Use `npm test` to build and run tests.
 
 Please feel free to create a PR!
