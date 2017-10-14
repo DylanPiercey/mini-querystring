@@ -4,42 +4,57 @@
   "version": "2.0.1",
   "author": "Dylan Piercey <pierceydylan@gmail.com>",
   "bugs": "https://github.com/DylanPiercey/mini-querystring/issues",
-  "devDependencies": {
-    "@types/mocha": "^2.2.43",
-    "@types/node": "^8.0.34",
-    "mocha": "^3.5.3",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.3"
-  },
-  "homepage": "https://github.com/DylanPiercey/mini-querystring",
-  "keywords": [
-    "URL",
-    "querystring",
-    "qs",
-    "parse",
-    "isomorphic",
-    "mini",
-    "universal"
-  ],
-  "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/DylanPiercey/mini-querystring"
-  },
-  "scripts": {
-    "build": "npm run lint && tsc",
-    "lint": "tslint -t codeFrame -c tslint.json '{src,test}/**/*.ts'",
-    "prepublish": "npm test",
-    "test": "npm run build && mocha -r ts-node/register ./test/**/*.test.ts"
-  },
   "dependencies": {
     "q-flat": "^1.0.1",
     "q-set": "^2.0.2"
-  }
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.34",
+    "coveralls": "^3.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "prettier": "^1.7.4",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.5.0",
+    "typescript": "^2.5.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/DylanPiercey/mini-querystring",
+  "keywords": [
+    "URL",
+    "isomorphic",
+    "mini",
+    "parse",
+    "qs",
+    "querystring",
+    "universal"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "tslint -t codeFrame -c tslint.json",
+      "git add"
+    ]
+  },
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DylanPiercey/header-field"
+  },
+  "scripts": {
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "format-all": "find ./{src,test}/*.ts | xargs prettier --write",
+    "mocha": "mocha -r ts-node/register ./test/**/*.test.ts",
+    "precommit": "lint-staged && npm test",
+    "test": "nyc --extension=.ts --include=src/**/*.ts --reporter=lcov --reporter=text-summary npm run mocha",
+    "test-ci": "nyc --extension=.ts --include=src/**/*.ts --reporter=lcovonly --reporter=text-summary npm run mocha"
+  },
+  "types": "dist/index.d.ts"
 }
