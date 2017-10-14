@@ -34,7 +34,7 @@
   </a>
   <!-- Size -->
   <a href="https://npmjs.org/package/mini-querystring">
-    <img src="https://img.shields.io/badge/size-418b-green.svg" alt="Browser Bundle Size"/>
+    <img src="https://img.shields.io/badge/size-1.03kb-green.svg" alt="Browser Bundle Size"/>
   </a>
 </h1>
 
